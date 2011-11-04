@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /language/polish/plpsfont
+# catalog-date 2009-10-07 21:35:42 +0200
+# catalog-license pd
+# catalog-version 1.15
 Name:		texlive-pl
 Version:	1.15
 Release:	1
@@ -471,6 +477,7 @@ as Windows and TeX use different encoding schemes.
 %doc %{_texmfdistdir}/doc/fonts/pl/README.ENG
 %doc %{_texmfdistdir}/doc/fonts/pl/README.POL
 %doc %{_texmfdistdir}/doc/fonts/pl/plsample.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -481,6 +488,8 @@ as Windows and TeX use different encoding schemes.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar dvips fonts doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
 mkdir -p %{buildroot}%{_texmf_updmap_d}
 cat > %{buildroot}%{_texmf_updmap_d}/pl <<EOF
 MixedMap plother.map
