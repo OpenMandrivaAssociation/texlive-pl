@@ -479,3 +479,17 @@ cat > %{buildroot}%{_texmf_updmap_d}/pl <<EOF
 MixedMap plother.map
 MixedMap pltext.map
 EOF
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.15-2
++ Revision: 754959
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.15-1
++ Revision: 719267
+- texlive-pl
+- texlive-pl
+- texlive-pl
+- texlive-pl
+
