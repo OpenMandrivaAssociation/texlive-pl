@@ -6,7 +6,7 @@
 # catalog-version 1.15
 Name:		texlive-pl
 Version:	1.15
-Release:	7
+Release:	8
 Summary:	Polish extension of CM fonts in Type 1 format
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/polish/plpsfont
