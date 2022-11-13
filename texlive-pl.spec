@@ -1,18 +1,12 @@
-# revision 15878
-# category Package
-# catalog-ctan /language/polish/plpsfont
-# catalog-date 2009-10-07 21:35:42 +0200
-# catalog-license pd
-# catalog-version 1.15
 Name:		texlive-pl
-Version:	3.0
-Release:	2
+Version:	58661
+Release:	1
 Summary:	Polish extension of CM fonts in Type 1 format
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/polish/plpsfont
 License:	PD
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pl.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pl.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pl.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pl.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -29,12 +23,12 @@ fonts usable with TeX; however, encoding files are now added,
 as Windows and TeX use different encoding schemes.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -467,7 +461,7 @@ as Windows and TeX use different encoding schemes.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
@@ -479,17 +473,3 @@ cat > %{buildroot}%{_texmf_updmap_d}/pl <<EOF
 MixedMap plother.map
 MixedMap pltext.map
 EOF
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.15-2
-+ Revision: 754959
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.15-1
-+ Revision: 719267
-- texlive-pl
-- texlive-pl
-- texlive-pl
-- texlive-pl
-
