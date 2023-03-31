@@ -1,6 +1,6 @@
 Name:		texlive-pl
 Version:	58661
-Release:	1
+Release:	2
 Summary:	Polish extension of CM fonts in Type 1 format
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/polish/plpsfont
