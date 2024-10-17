@@ -3,7 +3,7 @@ Version:	58661
 Release:	2
 Summary:	Polish extension of CM fonts in Type 1 format
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/language/polish/plpsfont
+URL:		https://www.ctan.org/tex-archive/language/polish/plpsfont
 License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pl.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pl.doc.r%{version}.tar.xz
